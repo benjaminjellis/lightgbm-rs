@@ -60,7 +60,7 @@ fn main() {
         println!("cargo:rustc-link-lib=dylib=omp");
     } else if target.contains("linux") {
         println!("cargo:rustc-link-lib=stdc++");
-        println!("cargo:rustc-link-lib=dylib=gomp");
+        println!("cargo:rustc-link-lib=static=gomp");
     }
 
     println!("cargo:rustc-link-search={}", out_path.join("lib").display());
